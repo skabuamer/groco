@@ -4,9 +4,9 @@
     --orange:#ff7800;
     --black: #130f40;
     --light-color: #666;
-    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
     --border:.2rem solid rgba(0,0,0,.1);
-    --outline:1rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
     --outline-hover:.2rem solid var(--black);
 }
 
@@ -53,6 +53,21 @@ section {
 .btn:hover {
     background: var(--orange);
     color: #fff;
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    color: var(--black);
+}
+
+.heading span {
+    background: var(--orange);
+    color: #fff;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0%, 93% 50%, 100% 100%, 0% 100%, 7% 50%, 0% 0%);
 }
 
 .header {
@@ -298,7 +313,60 @@ section {
     line-height: 1.8;
 }
 
+.features .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
 
+.features .box-container .box {
+    /* my css (solving button issue in card) */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* my css (solving button issue in card)*/
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.features .box-container .box:hover{
+    outline: var(--outline-hover);
+    outline-offset: 0rem;
+}
+
+.features .box-container .box img{
+    height: 17rem;
+    padding: 1rem 0rem;
+}
+
+.features .box-container .box h3 {
+    font-size: 2.5rem;
+    color: var(--black);
+    line-height: 1.8;
+}
+
+.features .box-container .box p {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0rem;
+    line-height: 1.8;
+    /* my css  */
+    margin-bottom: 6rem;
+    /* my css  */
+}
+
+/* my css (solving button issue in card) */
+.features .box-container .box a {
+    position: absolute;
+    bottom: 3rem;
+}
+
+/* my css (solving button issue in card) */
 
 
 
@@ -345,6 +413,9 @@ section {
      section {
         padding: 2rem;
     }
+    .features h1 span{
+        clip-path: polygon(100% 0%, 93% 50%, 100% 100%, 0% 100%, 7% 50%, 0% 0%);
+    }
 }
 
 @media (max-width:768px) {
@@ -382,5 +453,8 @@ section {
 @media (max-width:450px) {
     html {
         font-size: 50%;
+    }
+    .heading {
+        font-size: 2.5rem;
     }
 }
