@@ -272,7 +272,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/assets/images/banner-bg.webp');
+    background-image: url('./assets/images/banner-bg.webp');
     background-size: cover;
     background-position: center;
 }
